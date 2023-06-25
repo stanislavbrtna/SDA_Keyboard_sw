@@ -1,0 +1,180 @@
+/*
+ * matrix.c
+ *
+ *  Created on: 25. 6. 2023
+ *      Author: stanislaw
+ */
+
+
+#include "matrix.h"
+
+extern uint8_t kbd_matrix_x[80];
+extern uint8_t kbd_matrix_y[80];
+
+void kbd_init_matrix() {
+  kbd_matrix_x[0] = 0;
+  kbd_matrix_y[0] = 18;
+  kbd_matrix_x[1] = 8;
+  kbd_matrix_y[1] = 21;
+  kbd_matrix_x[2] = 8;
+  kbd_matrix_y[2] = 19;
+  kbd_matrix_x[3] = 1;
+  kbd_matrix_y[3] = 15;
+  kbd_matrix_x[4] = 0;
+  kbd_matrix_y[4] = 15;
+  kbd_matrix_x[5] = 7;
+  kbd_matrix_y[5] = 20;
+  kbd_matrix_x[6] = 0;
+  kbd_matrix_y[6] = 11;
+  kbd_matrix_x[7] = 1;
+  kbd_matrix_y[7] = 12;
+  kbd_matrix_x[8] = 8;
+  kbd_matrix_y[8] = 12;
+  kbd_matrix_x[9] = 8;
+  kbd_matrix_y[9] = 9;
+  kbd_matrix_x[10] = 7;
+  kbd_matrix_y[10] = 17;
+  kbd_matrix_x[11] = 5;
+  kbd_matrix_y[11] = 24;
+  kbd_matrix_x[12] = 7;
+  kbd_matrix_y[12] = 22;
+  kbd_matrix_x[13] = 8;
+  kbd_matrix_y[13] = 23;
+  kbd_matrix_x[14] = 8;
+  kbd_matrix_y[14] = 24;
+
+  kbd_matrix_x[15] = 8;
+  kbd_matrix_y[15] = 18;
+  kbd_matrix_x[16] = 7;
+  kbd_matrix_y[16] = 18;
+  kbd_matrix_x[17] = 7;
+  kbd_matrix_y[17] = 16;
+  kbd_matrix_x[18] = 7;
+  kbd_matrix_y[18] = 15;
+  kbd_matrix_x[19] = 7;
+  kbd_matrix_y[19] = 14;
+  kbd_matrix_x[20] = 8;
+  kbd_matrix_y[20] = 14;
+  kbd_matrix_x[21] = 8;
+  kbd_matrix_y[21] = 13;
+  kbd_matrix_x[22] = 7;
+  kbd_matrix_y[22] = 13;
+  kbd_matrix_x[23] = 7;
+  kbd_matrix_y[23] = 11;
+  kbd_matrix_x[24] = 7;
+  kbd_matrix_y[24] = 12;
+  kbd_matrix_x[25] = 7;
+  kbd_matrix_y[25] = 10;
+  kbd_matrix_x[26] = 8;
+  kbd_matrix_y[26] = 10;
+  kbd_matrix_x[27] = 1;
+  kbd_matrix_y[27] = 9;
+
+  kbd_matrix_x[28] = 1;
+  kbd_matrix_y[28] = 18;
+  kbd_matrix_x[29] = 6;
+  kbd_matrix_y[29] = 18;
+  kbd_matrix_x[30] = 6;
+  kbd_matrix_y[30] = 16;
+  kbd_matrix_x[31] = 6;
+  kbd_matrix_y[31] = 15;
+  kbd_matrix_x[32] = 6;
+  kbd_matrix_y[32] = 14;
+  kbd_matrix_x[33] = 1;
+  kbd_matrix_y[33] = 14;
+  kbd_matrix_x[34] = 1;
+  kbd_matrix_y[34] = 13;
+  kbd_matrix_x[35] = 6;
+  kbd_matrix_y[35] = 13;
+  kbd_matrix_x[36] = 6;
+  kbd_matrix_y[36] = 11;
+  kbd_matrix_x[37] = 6;
+  kbd_matrix_y[37] = 12;
+  kbd_matrix_x[38] = 6;
+  kbd_matrix_y[38] = 10;
+  kbd_matrix_x[39] = 8;
+  kbd_matrix_y[39] = 11;
+  kbd_matrix_x[40] = 5;
+  kbd_matrix_y[40] = 10;
+
+  kbd_matrix_x[41] = 1;
+  kbd_matrix_y[41] = 16;
+  kbd_matrix_x[42] = 3;
+  kbd_matrix_y[42] = 18;
+  kbd_matrix_x[43] = 3;
+  kbd_matrix_y[43] = 16;
+  kbd_matrix_x[44] = 3;
+  kbd_matrix_y[44] = 15;
+  kbd_matrix_x[45] = 3;
+  kbd_matrix_y[45] = 14;
+  kbd_matrix_x[46] = 0;
+  kbd_matrix_y[46] = 14;
+  kbd_matrix_x[47] = 0;
+  kbd_matrix_y[47] = 13;
+  kbd_matrix_x[48] = 3;
+  kbd_matrix_y[48] = 13;
+  kbd_matrix_x[49] = 3;
+  kbd_matrix_y[49] = 11;
+  kbd_matrix_x[50] = 3;
+  kbd_matrix_y[50] = 12;
+  kbd_matrix_x[51] = 3;
+  kbd_matrix_y[51] = 10;
+  kbd_matrix_x[52] = 5;
+  kbd_matrix_y[52] = 9;
+
+  kbd_matrix_x[53] = 1;
+  kbd_matrix_y[53] = 21;
+  kbd_matrix_x[54] = 0;
+  kbd_matrix_y[54] = 16;
+  kbd_matrix_x[55] = 5;
+  kbd_matrix_y[55] = 18;
+  kbd_matrix_x[56] = 5;
+  kbd_matrix_y[56] = 16;
+  kbd_matrix_x[57] = 5;
+  kbd_matrix_y[57] = 15;
+  kbd_matrix_x[58] = 5;
+  kbd_matrix_y[58] = 14;
+  kbd_matrix_x[59] = 2;
+  kbd_matrix_y[59] = 14;
+  kbd_matrix_x[60] = 2;
+  kbd_matrix_y[60] = 13;
+  kbd_matrix_x[61] = 5;
+  kbd_matrix_y[61] = 13;
+  kbd_matrix_x[62] = 5;
+  kbd_matrix_y[62] = 11;
+  kbd_matrix_x[63] = 5;
+  kbd_matrix_y[63] = 12;
+  kbd_matrix_x[64] = 2;
+  kbd_matrix_y[64] = 10;
+  kbd_matrix_x[65] = 3;
+  kbd_matrix_y[65] = 4;
+  kbd_matrix_x[66] = 3;
+  kbd_matrix_y[66] = 21;
+
+  kbd_matrix_x[67] = 7;
+  kbd_matrix_y[67] = 21;
+  kbd_matrix_x[68] = 8;
+  kbd_matrix_y[68] = 20;
+  kbd_matrix_x[69] = 1;
+  kbd_matrix_y[69] = 17;
+  kbd_matrix_x[70] = 0;
+  kbd_matrix_y[70] = 22;
+  kbd_matrix_x[71] = 6;
+  kbd_matrix_y[71] = 20;
+  kbd_matrix_x[72] = 0;
+  kbd_matrix_y[72] = 24;
+  kbd_matrix_x[73] = 2;
+  kbd_matrix_y[73] = 12;
+  kbd_matrix_x[74] = 1;
+  kbd_matrix_y[74] = 10;
+  kbd_matrix_x[75] = 1;
+  kbd_matrix_y[75] = 11;
+  kbd_matrix_x[76] = 0;
+  kbd_matrix_y[76] = 10;
+  kbd_matrix_x[77] = 4;
+  kbd_matrix_y[77] = 5;
+  kbd_matrix_x[78] = 0;
+  kbd_matrix_y[78] = 4;
+  kbd_matrix_x[79] = 2;
+  kbd_matrix_y[79] = 4;
+}
